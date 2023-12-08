@@ -25,7 +25,16 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    
+    .contact-info {
+      color: #ffffff; /* Cambia el color del texto de información de contacto según tus preferencias */
+      font-size: 16px; /* Ajusta el tamaño del texto según tus preferencias */
+    }
+
+    .contact-info a {
+      color: #ffffff; /* Cambia el color de los enlaces de contacto según tus preferencias */
+      text-decoration: none; /* Elimina el subrayado de los enlaces */
+      margin: 0 8px; /* Ajusta el espaciado entre los enlaces según tus preferencias */
+    }
     header {
       background-color: #f178a1;
       color: #fff;
@@ -136,14 +145,61 @@
       margin: 0 auto;
       display: block;
     }
+
+    #additional-info {
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .additional-info-entry {
+      margin: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    strong {
+      color: #555;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .contact-button i {
+      margin-right: 10px;
+    }
+
+    .contact-button:hover {
+      background-color: #45a049;
+    }
   </style>
   <div class="container">
     <header>
       <img src="https://live.staticflickr.com/65535/53383566564_6334091551_w.jpg" alt="Foto de perfil" class="profile-picture">
       <h1>Micaela Mansilla</h1>
       <p class="contact-info">
-        Contacto: +54 9 (3329) 309381 | Correo: micamansilla1496@gmail.com | Dirección: Bustamante 2290, Baradero
-      </p>    
+        Contacto: <a href="tel:+543329309381">+54 9 (3329) 309381</a> | 
+        Correo: <a href="mailto:micamansilla1496@gmail.com">micamansilla1496@gmail.com</a> | 
+        Dirección: <a href="https://www.google.com/maps?q=Bustamante+2290,+Baradero" target="_blank">Sánchez de Bustamante 2290, Baradero</a>
+      </p>
     </header>
 
     <nav class="navigation">
@@ -202,26 +258,33 @@
     </section>
 
     <section id="about">
-        <h2><i class="fas fa-user"></i> Acerca de Mí</h2>
-        <div class="about-entry">
-            <p>
-                Soy una joven de <strong>26 años</strong>, y me considero una persona <strong>responsable</strong> con un buen trato y presencia.
-                Entre mis habilidades destacan la <strong>puntualidad</strong>, <strong>buena comunicación</strong> con los clientes y la <strong>eficaz resolución</strong> de problemas.
-            </p>
-        </div>
-    </section>
+      <h2><i class="fas fa-user"></i> Acerca de Mí</h2>
+      <div class="about-entry">
+          <p>
+              ¡Hola! Soy Mica, con <strong>26 años</strong> de experiencia en la vida. Me considero una persona <strong>responsable</strong> con un trato amable y una presencia profesional.
+              Entre mis habilidades se destacan la <strong>puntualidad</strong>, una <strong>buena comunicación</strong> con los clientes y la <strong>eficaz resolución</strong> de problemas.
+          </p>
+          <p>
+              Si quieres saber más sobre mí, estaré encantada de agendar una reunión. En la sección de Información Adicional, encontrarás mis datos de contacto personal.
+          </p>
+          <p>
+              ¡Espero tener la oportunidad de charlar pronto y compartir experiencias! ¡Saludos desde Argentina!
+          </p>
+      </div>
+  </section>
+  
     
     <section id="additional-info">
-        <h2><i class="fas fa-info-circle"></i> Información Adicional</h2>
-        <div class="additional-info-entry">
-          <ul>
-            <li><strong>Teléfono:</strong> <a href="tel:+5493329309381">+54 9 3329 309381</a></li>
-            <li><strong>Correo:</strong> <a href="mailto:micamansilla1496@gmail.com">micamansilla1496@gmail.com</a></li>
-            <li><strong>Dirección:</strong> Gallo 500, Baradero</li>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.0114847379923!2d-59.5072994!3d-33.8120167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ba36521129ed6f%3A0x8e3e7cbc274ed7bf!2sGallo%20500%2C%20B2942%20Baradero%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1702009915054!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </ul>
-        </div>
-      </section>
+      <h2><i class="fas fa-info-circle"></i> Información Adicional</h2>
+      <div class="additional-info-entry">
+        <ul>
+          <li><a href="tel:+5493329309381" class="contact-button"><i class="fas fa-phone"></i> Llamar</a></li>
+          <li><a href="mailto:micamansilla1496@gmail.com" class="contact-button"><i class="fas fa-envelope"></i> Correo</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=5493329309381&text=%C2%A1Hola!%F0%9F%91%8B%20%C2%A1Quiero%20contactarme%20con%20vos%20por%20una%20propuesta%20labora!%F0%9F%9A%80&type=phone_number&app_absent=0" target="_blank" class="contact-button"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+          <li><a href="https://maps.app.goo.gl/pWBo3LrTH4CdyjPq9" target="_blank" class="contact-button"><i class="fas fa-map-marker-alt"></i> Dirección</a></li>
+        </ul>
+      </div>
+    </section>
       
       
     
