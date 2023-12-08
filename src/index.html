@@ -10,6 +10,133 @@
 </head>
 
 <body>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    header {
+      background-color: #f178a1;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+      margin-bottom: 20px; /* Agregué un margen inferior de 20px */
+  }
+  
+    
+    h1 {
+      margin: 0;
+    }
+    
+    .contact-info {
+      font-size: 14px;
+    }
+    
+    section {
+      margin-bottom: 30px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    h2 {
+      color: #f178a1;
+      display: flex;
+      align-items: center;
+    }
+    
+    i {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+    
+    article {
+      margin-bottom: 20px;
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    
+    #about,
+    #additional-info {
+      border-top: 2px solid #f178a1;
+      padding-top: 20px;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 10px 0; /* Agregué un espacio superior e inferior de 10px */
+      margin: 0;
+  }
+  
+    
+    li {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    
+  
+    /* Tu CSS anterior se mantiene aquí */
+  
+  .profile-picture {
+      border-radius: 50%;
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+    
+    .navigation {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .navigation ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navigation li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    
+    .navigation a {
+      text-decoration: none;
+      color: #f178a1;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    
+    .navigation a:hover {
+      color: #2980b9;
+    }
+    
+    #additional-info {
+      text-align: center;
+    }
+  
+    #additional-info iframe {
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
   <div class="container">
     <header>
       <img src="./images/foto.png" alt="Foto de perfil" class="profile-picture">
@@ -100,7 +227,27 @@
     
    
     
-  <script src="./main.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', function () {
+    const sections = ['education', 'experience', 'about', 'additional-info'];
+  
+    sections.forEach(sectionId => {
+      const link = document.querySelector(`[href="#${sectionId}"]`);
+      const section = document.getElementById(sectionId);
+  
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        hideAllSections();
+        section.style.display = 'block';
+      });
+    });
+  
+    function hideAllSections() {
+      sections.forEach(sectionId => {
+        document.getElementById(sectionId).style.display = 'none';
+      });
+    }
+  });
+  </script>
 </body>
 
 </html>
