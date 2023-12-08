@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=["education","experience","about","additional-info"];e.forEach((t=>{const n=document.querySelector(`[href="#${t}"]`),o=document.getElementById(t);n.addEventListener("click",(function(t){t.preventDefault(),e.forEach((e=>{document.getElementById(e).style.display="none"})),o.style.display="block"}))}))}));
